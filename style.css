@@ -1,18 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
-    --bg:#23242a;
-    --box: #1c1c1c;
-    --boxup:#28292d;
-    --cor-linear: #45f3ff;
-
+    --roxo-vibrante:#3b0171;
+    --amarelo-opaco:#D3C946;
+    --amarelo-forte:#ffff00;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
@@ -20,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--bg);
+    background-color: black;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -30,10 +27,10 @@ body {
     align-items: center;
     width: 380px;
     height: 420px;
-    background-color: var(--box);
+    background-color: var(--roxo-escuro);
     border-radius: 10px;
     overflow: hidden;
-    background-color:var(--box);
+    background-color:var(--roxo-escuro);
 }
 
 .box::before {
@@ -43,9 +40,8 @@ body {
     height: 420px;
     animation: animate 6s linear infinite;
     transform-origin: animate 6s linear infinite;
-    background-image: conic-gradient(var(--cor-linear), transparent, transparent 180deg, var(--cor-linear), transparent, transparent 360deg);
+    background-image: conic-gradient(var(--amarelo-forte), #ff05b8, var(--roxo-vibrante) 180deg, var(--amarelo-forte), #ff05b8, var(--roxo-vibrante) 360deg);
 }
-
 
 @keyframes animate 
     {
@@ -64,15 +60,15 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    inset: 2px;
+    inset: 3px;
     border-radius: 10px;
-    background-color: #28292d;
-  /*  z-index: 10;*/
+    background-color: var(--roxo-vibrante);
+    z-index: 10;
     padding: 50px 40px;
 }
 
 .form h1 {
-    color: var(--cor-linear);
+    color: var(--amarelo-forte);
     font-weight: 500;
     text-align: center;
     letter-spacing: 0.1em;
@@ -91,7 +87,7 @@ body {
     background: transparent;
     border: none;
     outline: none;
-    color: #23242a;
+    color: #000000;
     font-size: 1em;
     letter-spacing: 0.05em;
     z-index: 10;
@@ -102,7 +98,7 @@ body {
     left: 0;
     padding: 20px 0px 10px;
     font-size: 1em;
-    color: #8f8f8f;
+    color: white;
     pointer-events: none;
     letter-spacing: 0.05em;
     transition: 0.5s;
@@ -111,7 +107,7 @@ body {
 .input-box input:valid ~ label, 
 .input-box input:focus ~ label {
 
-    color: var(--cor-linear);
+    color: var(--amarelo-forte);
     transform: translateX(0px) translateY(-34px);
     font-size: 0.75em;
 }
@@ -122,7 +118,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--cor-linear);
+    background-color: var(--amarelo-opaco);
     border-radius: 4px;
     transition: .8s;
     pointer-events: none;
@@ -145,20 +141,20 @@ body {
 .links a {
     margin: 10px 0;
     font-size: 0.75em;
-    color: #8f8f8f;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .links a:hover,
 .links a:nth-child(2) 
 {
-    color: var(--cor-linear);
+    color: var(--amarelo-forte);
 }
 
 input[type="submit"] {
     border: none;
     outline: none;
-    background: var(--cor-linear);
+    background: var(--amarelo-forte);
     padding: 11px 25px;
     width: 100px;
     margin-top: 10px;
